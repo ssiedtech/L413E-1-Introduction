@@ -9,50 +9,51 @@ export const quiz = {
       correctAnswer: '1',
       answerSelectionType: 'single',
     },
-
-    // ** Uncomment questions below to put them back in **
-
-    // {
-    //   question:
-    //     "What benefits does GFEBS bring to the Army's reporting practices?",
-    //   answers: [
-    //     'Real-time data',
-    //     'On Demand Reports',
-    //     'Customizable reports',
-    //     'All of the above',
-    //   ],
-    //   questionType: 'text',
-    //   correctAnswer: '4',
-    // },
-    // {
-    //   question:
-    //     'With ___________, financial managers can view up-to-date, accurate financial information about the Army at any point in time.',
-    //   answers: [
-    //     'Trial Balance',
-    //     'Customization',
-    //     'Real-time data',
-    //     'All of the above',
-    //   ],
-    //   correctAnswer: '3',
-    //   questionType: 'text',
-    // },
-    // {
-    //   question: "GFEBS produces the Army's financial statements.",
-    //   answers: ['True', 'False'],
-    //   correctAnswer: '2',
-    //   questionType: 'text',
-    // },
-    // {
-    //   question:
-    //     "What data does GFEBS send to DDRS so that DDRS can produce the Army's financial statements?",
-    //   answers: [
-    //     'Real-time data',
-    //     'Customizable reports',
-    //     'Trial Balance',
-    //     'All of the above',
-    //   ],
-    //   correctAnswer: '3',
-    //   questionType: 'text',
-    // },
+    {
+      question:
+        "What benefits does GFEBS bring to the Army's reporting practices?",
+      questionType: 'text',
+      answers: [
+        'Real-time data',
+        'On Demand Reports',
+        'Customizable reports',
+        'All of the above',
+      ],
+      correctAnswer: '4',
+      answerSelectionType: 'single',
+    },
+    {
+      question:
+        'With ___________, financial managers can view up-to-date, accurate financial information about the Army at any point in time.',
+      questionType: 'text',
+      answers: [
+        'Trial Balance',
+        'Customization',
+        'Real-time data',
+        'All of the above',
+      ],
+      correctAnswer: '3',
+      answerSelectionType: 'single',
+    },
+    {
+      question: "GFEBS produces the Army's financial statements.",
+      questionType: 'text',
+      answers: ['True', 'False'],
+      correctAnswer: '1',
+      answerSelectionType: 'single',
+    },
+    {
+      question:
+        "What data does GFEBS send to DDRS so that DDRS can produce the Army's financial statements?",
+      questionType: 'text',
+      answers: [
+        'Real-time data',
+        'Customizable reports',
+        'Trial Balance',
+        'All of the above',
+      ],
+      correctAnswer: '3',
+      answerSelectionType: 'single',
+    },
   ],
 };
