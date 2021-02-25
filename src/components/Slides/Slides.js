@@ -263,14 +263,9 @@ function Slides() {
               <div className='col'>
                 <div>
                   <h3 className='slide-title'>Key Terms</h3>
-                  <p>
-                    We will start this module by going over some key terms in
-                    the course.
-                  </p>
-                  <p>KEY TERMS</p>
+                  <TermsComponent />
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
             </div>
           </div>
           <div className='slide'>
@@ -430,7 +425,7 @@ function Slides() {
                     course. GFEBS records and compiles the Army’s financial
                     data, then send it to DDRS at the end of each month and
                     fiscal year. DDRS uses the data to produce the Army General
-                    Fund Financial Statements.{' '}
+                    Fund Financial Statements.
                   </p>
                 </div>
               </div>

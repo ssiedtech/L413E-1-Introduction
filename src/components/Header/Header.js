@@ -92,7 +92,7 @@ export default function Header() {
             <Modal show={show} onHide={handleClose}>
               <Modal.Header variant='light' closeButton>
                 <Modal.Title className=''>
-                  <b>INDEX </b>| Financial Reporting
+                  <b>INDEX </b>| Introduction
                 </Modal.Title>
               </Modal.Header>
               <Modal.Body>
@@ -125,7 +125,7 @@ export default function Header() {
           fontSize: '27px',
         }}
       >
-        Financial Reporting
+        Introduction
       </span>
     </>
   );

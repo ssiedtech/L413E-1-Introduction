@@ -33,7 +33,7 @@ class TermsComponent extends React.Component {
 
   onClickButton4 = () => {
     this.setState({
-      term: 'Interface',
+      term: 'Real-Time',
       definition:
         'DDRS: The capability in GFEBS of processing transactions the instant they are entered into the system. For instance, as soon as a financial document is posted, it is visible on the G/L. ',
     });
@@ -41,7 +41,7 @@ class TermsComponent extends React.Component {
 
   onClickButton5 = () => {
     this.setState({
-      term: 'Interface',
+      term: 'Trial Balance',
       definition:
         'A summary statement of all G/L debit and credit account balances in a double entry ledger on a given date.  This preliminary balance is used to point out errors in the Period End closing process. ',
     });
