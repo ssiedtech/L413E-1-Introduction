@@ -4,6 +4,14 @@ import { AppContext } from '../../context/AppContext';
 import Quiz from 'react-quiz-component';
 import { quiz } from '../Quiz/Quiz';
 import TermsComponent from '../TermsComponent/TermsComponent.js';
+import { Image } from 'react-bootstrap';
+import GFEBS from '../../img/GFEBS.png';
+import Objectives from '../../img/objectives.png';
+import Audience from '../../img/target_audience.jpg';
+import Disclaimer from '../../img/training_disclaimer.png';
+import CourseFlow from '../../img/course_flow.png';
+import LearningCheckPoint from '../../img/module_checkpoint.png';
+import FMCrest from '../../img/fm_crest.png';
 
 function Slides() {
   // State management
@@ -60,6 +68,7 @@ function Slides() {
     arrows: true,
     autoplay: false,
     defaultIndex: 0,
+    transitionDuration: 300,
     prevArrow: (
       <div style={{ width: '30px', marginRight: '-30px' }}>
         <i className='fas fa-arrow-left'></i>
@@ -121,7 +130,9 @@ function Slides() {
                   pivotal to the process.
                 </span>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image fluid className='m-5 p-5' src={GFEBS} alt='' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -163,7 +174,14 @@ function Slides() {
                   </ul>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image
+                  className='mt-5'
+                  fluid
+                  src={Objectives}
+                  alt='objectives'
+                />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -179,7 +197,9 @@ function Slides() {
                   </p>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image className='' fluid src={Audience} alt='Audience' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -199,7 +219,7 @@ function Slides() {
                     Performance Support Website:
                   </p>
 
-                  <a href='https://gfebs.army.mil/gm/'>
+                  <a href='https://gfebs.army.mil/gm/' target='_blank'>
                     https://gfebs.army.mil/gm/
                   </a>
                   <br />
@@ -211,7 +231,9 @@ function Slides() {
                   </p>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image className='' fluid src={Disclaimer} alt='Disclaimer' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -255,7 +277,9 @@ function Slides() {
                   <li>Generated Reports Review</li>
                 </ul>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image className='' fluid src={CourseFlow} alt='Course Flow' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -333,7 +357,9 @@ function Slides() {
                   </p>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <img className='' src={GFEBS} alt='' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -366,7 +392,9 @@ function Slides() {
                   </p>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <img className='' src={GFEBS} alt='' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -386,7 +414,9 @@ function Slides() {
                   </ul>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <img className='' src={GFEBS} alt='' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -459,7 +489,9 @@ function Slides() {
                   </p>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image className='' fluid src={GFEBS} alt='' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -487,7 +519,9 @@ function Slides() {
                   </p>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image className='' src={GFEBS} alt='' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -514,7 +548,9 @@ function Slides() {
                   </ul>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image className='' src={GFEBS} alt='' />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -528,7 +564,14 @@ function Slides() {
                   </p>
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image
+                  className=''
+                  fluid
+                  src={LearningCheckPoint}
+                  alt='Learning Checkpoint'
+                />
+              </div>
             </div>
           </div>
           <div className='slide'>
@@ -544,7 +587,7 @@ function Slides() {
                 />
               </div>
               <div className='col-6 d-flex p-5 justify-content-center'>
-                <img
+                <Image
                   style={{ height: '300px' }}
                   src='https://ssilrc.army.mil/resources/FMS/GFEBS/GFEBSLegacy/L413E/1FinancialReporting/html/images/qanda_-_info.png'
                   alt=''
@@ -567,7 +610,9 @@ function Slides() {
                   You may exit this module by clicking the <b>Exit</b> button.
                 </div>
               </div>
-              <div className='col'>IMAGE</div>
+              <div className='col'>
+                <Image className='' fluid src={FMCrest} alt='FM Crest' />
+              </div>
             </div>
           </div>
         </Slide>
