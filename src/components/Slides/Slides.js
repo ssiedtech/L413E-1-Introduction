@@ -6,12 +6,13 @@ import { quiz } from '../Quiz/Quiz';
 import TermsComponent from '../TermsComponent/TermsComponent.js';
 import { Image } from 'react-bootstrap';
 import GFEBS from '../../img/GFEBS.png';
-import Objectives from '../../img/objectives.png';
-import Audience from '../../img/target_audience.jpg';
-import Disclaimer from '../../img/training_disclaimer.png';
-import CourseFlow from '../../img/course_flow.png';
-import LearningCheckPoint from '../../img/module_checkpoint.png';
+import Objectives from '../../img/objectives.svg';
+import Audience from '../../img/target_audience.svg';
+import Disclaimer from '../../img/training_disclaimer.svg';
+import CourseFlow from '../../img/course_flow.svg';
+import LearningCheckPoint from '../../img/module_checkpoint.svg';
 import FMCrest from '../../img/fm_crest.png';
+import qanda from '../../img/qanda.svg';
 
 function Slides() {
   // State management
@@ -36,7 +37,10 @@ function Slides() {
     }
 
     // Removes next arrow on final slide
-    if (context.currentSlide === context.total) {
+    if (
+      context.currentSlide === context.total ||
+      context.currentSlide === context.total - 1
+    ) {
       document.querySelector(
         '#root > div > div.mx-auto.my-auto > div > div > div.next-arrow.nav'
       ).style.display = 'none';
@@ -60,6 +64,12 @@ function Slides() {
   // Resets Quiz key to random number and rerenders it... there's probably a better way to do this.
   function retakeQuiz() {
     return setKey(Math.random());
+  }
+
+  function continueQuiz() {
+    document.querySelector(
+      '#root > div > div.mx-auto.my-auto > div > div > div.next-arrow.nav'
+    ).style.display = 'block';
   }
 
   // React-Slideshow package settings
@@ -86,6 +96,22 @@ function Slides() {
     onChange: (previous, next) => {
       context.onSlideChange(previous, next);
     },
+  };
+
+  // Lightbox properties
+  const options = {
+    settings: {},
+    caption: { showCaption: false },
+    buttons: {
+      showAutoplayButton: false,
+      showCloseButton: true,
+      showDownloadButton: false,
+      showFullscreenButton: false,
+      showNextButton: false,
+      showPrevButton: false,
+      showThumbnailsButton: false,
+    },
+    thumbnails: { showThumbnails: false },
   };
 
   // Sets post-quiz state
@@ -571,7 +597,8 @@ function Slides() {
               </div>
               <div className='col'>
                 <Image
-                  className=''
+                  style={{ height: '350px' }}
+                  className='m-5'
                   fluid
                   src={LearningCheckPoint}
                   alt='Learning Checkpoint'
@@ -587,16 +614,12 @@ function Slides() {
                   key={key}
                   continueTillCorrect={true}
                   showDefaultResult={false}
-                  onComplete={onCompleteAction}
+                  onComplete={continueQuiz}
                   customResultPage={renderCustomResultPage}
                 />
               </div>
               <div className='col-6 d-flex p-5 justify-content-center'>
-                <Image
-                  style={{ height: '300px' }}
-                  src='https://ssilrc.army.mil/resources/FMS/GFEBS/GFEBSLegacy/L413E/1FinancialReporting/html/images/qanda_-_info.png'
-                  alt=''
-                />
+                <Image src={qanda} style={{ height: '350px' }} alt='' />
               </div>
             </div>
           </div>
